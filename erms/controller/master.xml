@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+   "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<package name="master" namespace="/master" extends="access">
+		
+				
+		<action name="index" class="masterAction" method="execute">
+            <result name="success" >/web/master/index.jsp</result>
+        </action>
+        
+        <action name="roles" class="masterAction" method="roles">
+            <result name="success" >/web/master/roles.jsp</result>
+        </action>
+        <action name="branches" class="masterAction" method="branches">
+            <result name="success" >/web/master/branches.jsp</result>
+        </action>
+        <action name="modules" class="masterAction" method="modules">
+            <result name="success" >/web/master/modules.jsp</result>
+        </action>
+        <action name="menus" class="masterAction" method="menus">
+            <result name="success" >/web/master/menus.jsp</result>
+        </action>
+        <action name="permissions" class="masterAction" method="permissions">
+            <result name="success" >/web/master/permissions.jsp</result>
+        </action>
+        
+        <action name="system" class="masterAction" method="system">
+            <result name="success" >/web/master/systems.jsp</result>
+        </action>
+		
+		<action name="view/{id}" class="masterAction" method="view">
+            <result name="success" >/web/master/masterView.jsp</result>
+        </action>
+		<action name="update/{id}" class="masterAction" method="update">
+            <result name="success" >/web/master/masterEdit.jsp</result>
+        </action>
+        <action name="delete/{id}" class="masterAction" method="delete">
+            <result name="success" >/web/master/index.jsp</result>
+        </action>        
+		<action name="add/{control}" class="masterAction" method="add">
+            <result name="success" >/web/master/masterAdd.jsp</result>
+        </action>
+        
+        <action name="save" class="masterForm" method="execute">
+            <result name="success" type="redirectAction">
+            	<param name="actionName">index</param>
+		        <param name="namespace">/master</param>
+            </result>
+            <result name="input" >/web/master/masterAdd.jsp</result>
+        </action>
+
+            
+		
+        
+	</package>
+</struts>		

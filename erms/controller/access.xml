@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+   "http://struts.apache.org/dtds/struts-2.3.dtd">
+ 
+ <struts>
+ 	<package name="access" extends="struts-default, json-default" namespace="/access">
+ 			
+		<interceptors>
+			<interceptor name="ermException" class="com.gfs.erm.exception.ExceptionHandler" />
+			<!-- <interceptor class="com.gfs.erm.interceptor.LoginInterceptor" name="loginInterceptor" /> -->
+			<!-- <interceptor class="com.gfs.erm.interceptor.AccessRoleInterceptor" name="roleInterceptor" >
+				<param name="excludeMethod">common</param>
+			</interceptor> -->  
+			
+			<interceptor-stack name="myStack">
+			  <!--  <interceptor-ref name="loginInterceptor" />
+			   <interceptor-ref name="roleInterceptor" />  -->
+			   <interceptor-ref name="defaultStack" />
+			   <interceptor-ref name="ermException" />
+			       
+			</interceptor-stack>
+				
+			<interceptor-stack name="validStack">
+			   	<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="validation" />
+				<interceptor-ref name="ermException" />
+			    <!--<interceptor-ref name="defaultStackHibernateStrutsValidation" />-->
+			</interceptor-stack>
+				
+		</interceptors>
+		<default-interceptor-ref name="myStack" />	
+		<!--End Interceptors Config-->
+		<default-action-ref name="index" /> 
+		
+		<!--GLOBAL RESULT-->
+		<global-results>
+	       <result name="error" type="redirectAction">
+	          <param name="actionName">errorProcess</param>
+	          <param name="namespace">/</param>
+	       </result>
+	       <result name="login-fail" type="redirectAction">
+	          <param name="actionName">login</param>
+	          <param name="namespace">/</param>
+	       </result>
+	       <result name="role-fail" type="redirectAction">
+	          <param name="actionName">roleDenied</param>
+	          <param name="namespace">/</param>
+	       </result>
+			
+		</global-results>
+		<!--EXCEPTIONS-->
+		    
+	    <global-exception-mappings>
+	        <exception-mapping exception="java.lang.NullPointerException"  result="error" />
+	      	<exception-mapping exception="java.lang.Exception" result="error"/>
+	      	<exception-mapping exception="java.lang.RuntimeException" result="error"/>
+		</global-exception-mappings>
+		
+ 	
+	</package>
+</struts>	
+	

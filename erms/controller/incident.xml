@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+   "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<package name="incident" namespace="/incident" extends="access">
+		
+					
+		<action name="index" class="incidentAction" method="execute">
+            <result name="success" >/web/incident/incident.jsp</result>
+            <result name="ajaxSuccess" >/web/ajax/incident.jsp</result>
+            
+        </action>
+        <action name="view/{id}" class="incidentAction" method="view">
+            <result name="success" >/web/incident/incidentView.jsp</result>
+        </action>
+		<action name="update/{id}" class="incidentAction" method="update">
+            <result name="success" >/web/incident/incidentEdit.jsp</result>
+        </action>
+        <action name="delete/{id}" class="incidentAction" method="delete">
+            <result name="success" >/web/incident/incident.jsp</result>
+        </action>        
+		<action name="add" class="incidentAction" method="add">
+            <result name="success" >/web/incident/incidentAdd.jsp</result>
+        </action>
+        
+        <action name="save" class="incidentForm" method="execute">
+            <result name="success" type="redirectAction">
+            	<param name="actionName">index</param>
+		        <param name="namespace">/incident</param>
+            </result>
+            <result name="input" >/web/incident/incidentAdd.jsp</result>
+        </action>
+
+        
+		
+        
+	</package>
+</struts>		

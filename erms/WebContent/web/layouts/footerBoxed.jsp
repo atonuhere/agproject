@@ -38,14 +38,14 @@
             <div class="widget col-lg-3 col-md-3 col-sm-12">
             <h4 class="title">Flickr Stream</h4>
 				<ul class="flickr">
-					<li><a href="#"><img alt="" src="${rootpath}images/demos/01_flickr.jpg"></a></li>
-					<li><a href="#"><img alt="" src="${rootpath}images/demos/02_flickr.jpg"></a></li>
-					<li><a href="#"><img alt="" src="${rootpath}images/demos/03_flickr.jpg"></a></li>
-					<li><a href="#"><img alt="" src="${rootpath}images/demos/04_flickr.jpg"></a></li>
-					<li><a href="#"><img alt="" src="${rootpath}images/demos/05_flickr.jpg"></a></li>
-					<li><a href="#"><img alt="" src="${rootpath}images/demos/06_flickr.jpg"></a></li>
-					<li><a href="#"><img alt="" src="${rootpath}images/demos/07_flickr.jpg"></a></li>
-					<li><a href="#"><img alt="" src="${rootpath}images/demos/08_flickr.jpg"></a></li>
+					<li><a href="#"><img alt="" src="${rootpath}assets/images/demos/01_flickr.jpg"></a></li>
+					<li><a href="#"><img alt="" src="${rootpath}assets/images/demos/02_flickr.jpg"></a></li>
+					<li><a href="#"><img alt="" src="${rootpath}assets/images/demos/03_flickr.jpg"></a></li>
+					<li><a href="#"><img alt="" src="${rootpath}assets/images/demos/04_flickr.jpg"></a></li>
+					<li><a href="#"><img alt="" src="${rootpath}assets/images/demos/05_flickr.jpg"></a></li>
+					<li><a href="#"><img alt="" src="${rootpath}assets/images/demos/06_flickr.jpg"></a></li>
+					<li><a href="#"><img alt="" src="${rootpath}assets/images/demos/07_flickr.jpg"></a></li>
+					<li><a href="#"><img alt="" src="${rootpath}assets/images/demos/08_flickr.jpg"></a></li>
 				</ul>
             </div><!-- end widget -->  
         </div><!-- end container -->
@@ -73,20 +73,20 @@
 	
     
     <!-- Main Scripts-->
-	<script src="${rootpath}js/jquery.js"></script>
-	<script src="${rootpath}js/bootstrap.min.js"></script>
-    <script src="${rootpath}js/jquery.unveilEffects.js"></script>	
-	<script src="${rootpath}js/retina-1.1.0.js"></script>
-	<script src="${rootpath}js/jquery.hoverdir.js"></script>
-    <script src="${rootpath}js/owl.carousel.js"></script>	
-    <script src="${rootpath}js/jetmenu.js"></script>	
-	<script src="${rootpath}js/jquery.hoverex.min.js"></script>
-	<script src="${rootpath}js/jquery.prettyPhoto.js"></script>
-	<script src="${rootpath}js/custom.js"></script>
+	<script src="${rootpath}assets/js/jquery.js"></script>
+	<script src="${rootpath}assets/js/bootstrap.min.js"></script>
+    <script src="${rootpath}assets/js/jquery.unveilEffects.js"></script>	
+	<script src="${rootpath}assets/js/retina-1.1.0.js"></script>
+	<script src="${rootpath}assets/js/jquery.hoverdir.js"></script>
+    <script src="${rootpath}assets/js/owl.carousel.js"></script>	
+    <script src="${rootpath}assets/js/jetmenu.js"></script>	
+	<script src="${rootpath}assets/js/jquery.hoverex.min.js"></script>
+	<script src="${rootpath}assets/js/jquery.prettyPhoto.js"></script>
+	<script src="${rootpath}assets/js/custom.js"></script>
 	<!-- LayerSlider script files -->
-	<script src="${rootpath}js/layerslider/js/greensock.js" type="text/javascript"></script>
-	<script src="${rootpath}js/layerslider/js/layerslider.transitions.js" type="text/javascript"></script>
-	<script src="${rootpath}js/layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
+	<script src="${rootpath}assets/js/layerslider/js/greensock.js" type="text/javascript"></script>
+	<script src="${rootpath}assets/js/layerslider/js/layerslider.transitions.js" type="text/javascript"></script>
+	<script src="${rootpath}assets/js/layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
 	<!-- Initializing the slider -->
 	<script>
 		jQuery("#layerslider").layerSlider({

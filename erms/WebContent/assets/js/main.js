@@ -11,7 +11,21 @@ $(document).on('click', "#dispTable_List th.sortedtable", function () {
 	var order = jQuery(this).attr("data-order");
 	ajaxPageSortLoad('dispTable_List', column, order);
 		
-});     
+}); 
+
+//Load Fieldset collapsible............
+$(function() {
+$('fieldset.view_toggle').each(function() {
+	var handler = $(this).find('legend');
+	var toggledObject = $(this).find('.view_toggle_contents');
+	toggledObject.hide();
+	handler.click(function() {
+		$(this).toggleClass('is_active_handler');
+		toggledObject.slideToggle(600);
+
+	});
+});
+});
 
 
 

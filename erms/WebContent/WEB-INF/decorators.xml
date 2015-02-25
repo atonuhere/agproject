@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<decorators defaultdir="/layouts">
+<decorators defaultdir="/web/layouts">
     <excludes>
        <pattern>/nodecorate/*</pattern>
         <pattern>/css/*</pattern>
@@ -7,16 +7,10 @@
         <pattern>/images/*</pattern>
         <pattern>/web/ajax/*</pattern>
     </excludes>
-
-     <decorator name="indexWide" page="layoutWide.jsp">
-        <pattern>/index2.jsp</pattern>
-    </decorator>
     
     <decorator name="index" page="layoutBoxed.jsp">
-        <pattern>/index.jsp</pattern>
         <pattern>/home.jsp</pattern>
         <pattern>/login.jsp</pattern>
-       
     </decorator>
        
     <decorator name="onecolumn" page="onecolumnLayout.jsp">

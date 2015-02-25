@@ -13,7 +13,28 @@
 </div>
 <h4 class="title">Incident Logs</h4>
 <div class="content clearfix">
- 
+ 	<div class="" id="searchForm">
+		<fieldset  class="view_toggle">
+			<legend><i class="icon-eye-open"></i>Search Incident</legend>
+			<div class="view_toggle_contents" style="display: none;">
+				<div class="span4">
+					<label class="span1">No</label>
+			   		<input type="text" name="incNumber" class="span3">
+			   		
+			   	</div>
+			   <div class="span4">
+					<label class="span1">Status</label>
+			   		<input type="text" name="incidentStatusId" class="span3">
+			   		
+			   	</div>  	
+			        	
+				<div class="span2">	 	
+					<a href="javascript:searchPage();" class="btn">Search</a>
+					<a href="javascript:clearSearch('${elementId}');" class="btn">Clear</a>
+			    </div>
+			</div>
+		</fieldset>
+	</div>
 	<div id="dispTable_List">
 		${dataPage.pagingString}
 		<table class="table table-striped overide-table">

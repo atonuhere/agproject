@@ -4,9 +4,6 @@
 <%@taglib prefix="s" uri="/struts-tags" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@taglib prefix="sj" uri="/struts-jquery-tags"%>
-<%@taglib prefix="sb" uri="/struts-bootstrap-tags" %>
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8" />
@@ -15,48 +12,37 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="">
-	<link rel="shortcut icon" href="${rootpath}images/favicon.ico">
+	<link rel="shortcut icon" href="${rootpath}assets/images/favicon.ico">
     
 	<!-- Google Fonts -->
-    <link rel="stylesheet" type="text/css" href="${rootpath}css/OpenSans.css" >
-    <link rel="stylesheet" type="text/css" href="${rootpath}css/Raleway.css" >
+    <link rel="stylesheet" type="text/css" href="${rootpath}assets/css/OpenSans.css" >
+    <link rel="stylesheet" type="text/css" href="${rootpath}assets/css/Raleway.css" >
 	<!-- Awesome Fonts -->
-	<link rel="stylesheet" type="text/css" href="${rootpath}css/font-awesome.css">
-	
+	<link rel="stylesheet" type="text/css" href="${rootpath}assets/css/font-awesome.css">
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="${rootpath}css/bootstrap.css" >
-	<link rel="stylesheet" type="text/css" href="${rootpath}css/bootstrap-datetimepicker.min.css" >
+	<link rel="stylesheet" type="text/css" href="${rootpath}assets/css/bootstrap.css" >
 	<!-- Template Styles -->
-	<link rel="stylesheet" type="text/css" href="${rootpath}css/style.css">
-	<link rel="stylesheet" type="text/css" href="${rootpath}css/colors.css"> 
-	
-	   
+	<link rel="stylesheet" type="text/css" href="${rootpath}assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="${rootpath}assets/css/colors.css">    
 	<!-- Layer Slider -->
-	
+	<link rel="stylesheet" type="text/css" href="${rootpath}assets/js/layerslider/css/layerslider.css">
 	<!-- http://www.456bereastreet.com/archive/201209/tell_css_that_javascript_is_available_asap/ -->
 	<script>
 		document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
 	</script>
   
-  	<script src="${rootpath}js/jquery.js"></script>
-   	<s:head />
-  	
 	<!-- Support for HTML5 -->
 	<!--[if lt IE 9]>
-		<script src="${rootpath}js/html5.js"></script>
+		<script src="${rootpath}assets/js/html5.js"></script>
 	<![endif]-->
 
 	<!-- Enable media queries on older browsers -->
 	<!--[if lt IE 9]>
-		<script src="${rootpath}js/respond.min.js"></script>
+		<script src="${rootpath}assets/js/respond.min.js"></script>
 	<![endif]-->
   
-	<script src="${rootpath}js/modernizr.js"></script>
-	
-	
-  	
-  	
-  	
+	<script src="${rootpath}assets/js/modernizr.js"></script>
+  
   </head>
 <body class="boxed">
 <!-- BOXED WRAPPER -->
@@ -96,7 +82,7 @@
 	            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 	                <ul class="breadcrumb">
 	                    <li><a href="home.html">Home</a></li>
-	                    <li>${menu}</li>
+	                   
 	                </ul>
 	                <h2 style="text-transform: uppercase;">${menu}</h2>
 	            </div>
@@ -105,7 +91,7 @@
 						<div class="search-bar">
 							<form action="#" method="get">
 								<fieldset>
-									<input type="image" src="${rootpath}images/pixel.gif" class="searchsubmit" alt="" />
+									<input type="image" src="images/pixel.gif" class="searchsubmit" alt="" />
 									<input type="text" class="search_text showtextback" name="s" id="s" value="Search on this site..." />							
 								</fieldset>
 							</form>
@@ -120,8 +106,8 @@
 	    <section class="section1">
 	    	<div class="container clearfix">
 	        	<div class="content clearfix">
-	        		  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
-		        			<s:actionerror/>
+	        		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
+	        			<s:actionerror/>
 		        			<s:actionmessage/>
 		        			<div class="alert alert-danger hide" id="messageErrorContent">
 		        				${sessionScope.errorAction.errorMessage}
@@ -129,16 +115,10 @@
 		        			<div class="alert alert-success hide" id="messageSuccessContent">
 		        				${sessionScope.successAction.successMessage}
 		        			</div>
-		        		</div>
-		        		<div class="content col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
-		        		  	<div id="sidebar" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-		        		  	 <%@ include file="menu.jsp" %>
-		        		  	</div><!-- end sidebar -->
-		        		  
-		        		  	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-			    				<decorator:body/>
-			    			</div>
-			    		</div>		
+	        		</div>
+	        		<div class="content col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
+		    			<decorator:body/>
+		    		</div>	
 		    	</div><!-- end content -->
 		    </div><!-- end container -->
 	    </section><!-- end section -->		       
@@ -147,36 +127,21 @@
 	    <!--------Footer start-----------> 
 	    <%@ include file="footer.jsp" %>
 	    <!--------Footer end----------->
-     	<!-- Modal -->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		</div>
-		<!-- Modal End-->
      	<div class="dmtop">Scroll to Top</div>
 	    
 	    <!-- Main Scripts-->
-		
-		<script src="${rootpath}js/bootstrap.min.js"></script>
-		<script src="${rootpath}js/jquery.unveilEffects.js"></script>	
-		<script src="${rootpath}js/retina-1.1.0.js"></script>
-		<script src="${rootpath}js/jquery.hoverdir.js"></script>
-	    <script src="${rootpath}js/owl.carousel.js"></script>	
-	    <script src="${rootpath}js/jetmenu.js"></script>	
-		<script src="${rootpath}js/jquery.hoverex.min.js"></script>
-		<script src="${rootpath}js/jquery.prettyPhoto.js"></script>
-		<script src="${rootpath}js/custom.js"></script>
-		<script src="${rootpath}js/bootstrap-datetimepicker.min.js"></script>
-		<script src="${rootpath}js/main.js"></script>
-		
+		<script src="${rootpath}assets/js/jquery.js"></script>
+		<script src="${rootpath}assets/js/bootstrap.min.js"></script>
+	    <script src="${rootpath}assets/js/jquery.unveilEffects.js"></script>	
+		<script src="${rootpath}assets/js/retina-1.1.0.js"></script>
+		<script src="${rootpath}assets/js/jquery.hoverdir.js"></script>
+	    <script src="${rootpath}assets/js/owl.carousel.js"></script>	
+	    <script src="${rootpath}assets/js/jetmenu.js"></script>	
+		<script src="${rootpath}assets/js/jquery.hoverex.min.js"></script>
+		<script src="${rootpath}assets/js/jquery.prettyPhoto.js"></script>
+		<script src="${rootpath}assets/js/custom.js"></script>
+
    </div><!-- end boxed -->
-   <c:if test="${sessionScope.errorAction.errorMessage ne null }">
-	<script>
-		$('#messageErrorContent').show();
-	</script>
-	</c:if>
-	<c:if test="${sessionScope.successAction.successMessage ne null }">
-	<script>
-		$('#messageSuccessContent').show();
-	</script>
-	</c:if>  
+  
 </body>
 </html>

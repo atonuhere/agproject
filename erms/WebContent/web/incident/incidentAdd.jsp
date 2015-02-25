@@ -14,14 +14,14 @@
 
 	<h4 class="title">Report an Incident</h4>
 
-	<form  method="post" action="/incident/save.html" name="addIncidentLogForm" class="form-horizontal">
+	<form  method="post" action="${rootpath}incident/save.html" name="addIncidentLogForm" class="form-horizontal">
 		<input type="hidden" name="incident.incidentStatusId" value="1" />
 		<input type="hidden" name="incident.active" value="1" />
 		<input type="hidden" name="incident.loggedBy" value="${loguser.id}" />
 		
 	
 		<div class="form-control">
-			<label class="form-label" for="incident_reportedBy">${bundle[label.reportedby]}</label>
+			<label class="form-label" for="incident_reportedBy">Reported by</label>
 			<input type="text" class="" placeholder="Reported by" name="incident.reportedBy" id="incident_reportedBy"/>						           
 		</div>
 		

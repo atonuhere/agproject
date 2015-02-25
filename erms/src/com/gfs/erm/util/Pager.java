@@ -58,6 +58,11 @@ import com.gfs.erm.web.common.WebConstants;
   * Total number of pages.
   */
  private String elementId;
+ 
+ /**
+  * Paging String.
+  */
+ private String searchString;
 
  /**
   * @return the resultDtoList
@@ -198,6 +203,14 @@ public String getSort() {
  */
 public void setSort(String sort) {
 	this.sort = sort;
+}
+
+public String getSearchString() {
+	return searchString;
+}
+
+public void setSearchString(String searchString) {
+	this.searchString = searchString;
 }
  
 }

@@ -274,6 +274,7 @@ public class IncidentAction extends BaseAction {
 	      requestedPage.setElementId(elementId);
 	      requestedPage.setOrder(order);
 	      requestedPage.setSort(sort);
+	      requestedPage.setSearchString(searchString);
 	     
 	      
 	      return requestedPage;

@@ -11,20 +11,20 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="">
-	<link rel="shortcut icon" href="${rootpath}images/favicon.ico">
+	<link rel="shortcut icon" href="${rootpath}assets/images/favicon.ico">
     
 	<!-- Google Fonts -->
-    <link rel="stylesheet" type="text/css" href="${rootpath}css/OpenSans.css" >
-    <link rel="stylesheet" type="text/css" href="${rootpath}css/Raleway.css" >
+    <link rel="stylesheet" type="text/css" href="${rootpath}assets/css/OpenSans.css" >
+    <link rel="stylesheet" type="text/css" href="${rootpath}assets/css/Raleway.css" >
 	<!-- Awesome Fonts -->
-	<link rel="stylesheet" type="text/css" href="${rootpath}css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="${rootpath}assets/css/font-awesome.css">
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="${rootpath}css/bootstrap.css" >
+	<link rel="stylesheet" type="text/css" href="${rootpath}assets/css/bootstrap.css" >
 	<!-- Template Styles -->
-	<link rel="stylesheet" type="text/css" href="${rootpath}css/style.css">
-	<link rel="stylesheet" type="text/css" href="${rootpath}css/colors.css">    
+	<link rel="stylesheet" type="text/css" href="${rootpath}assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="${rootpath}assets/css/colors.css">    
 	<!-- Layer Slider -->
-	<link rel="stylesheet" type="text/css" href="${rootpath}js/layerslider/css/layerslider.css">
+	<link rel="stylesheet" type="text/css" href="${rootpath}assets/js/layerslider/css/layerslider.css">
 	<!-- http://www.456bereastreet.com/archive/201209/tell_css_that_javascript_is_available_asap/ -->
 	<script>
 		document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
@@ -40,7 +40,7 @@
 		<script src="${rootpath}js/respond.min.js"></script>
 	<![endif]-->
   
-	<script src="${rootpath}js/modernizr.js"></script>
+	<script src="${rootpath}assets/js/modernizr.js"></script>
   
   </head>
 <body class="boxed">
